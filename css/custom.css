@@ -353,4 +353,62 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+/* 3D Perspective Card Layout & Effects */
+.perspective-grid {
+  perspective: 1200px;
+}
+
+.testimonial-3d-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+  will-change: transform;
+}
+
+/* Hover style and fallback when JS is not available */
+.testimonial-3d-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12), 0 0 35px rgba(255, 199, 44, 0.12);
+  border-color: rgba(226, 232, 240, 1);
+}
+
+/* Parallax offsets for nested children */
+.testimonial-3d-card .tilt-stars {
+  transform: translateZ(30px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-3d-card .tilt-text {
+  transform: translateZ(20px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-3d-card .tilt-profile {
+  transform: translateZ(40px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Premium gradient top-border highlight */
+.testimonial-3d-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FFC72C, #EAB308, #FFC72C);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.testimonial-3d-card:hover::after {
+  opacity: 1;
+}
+
+
 

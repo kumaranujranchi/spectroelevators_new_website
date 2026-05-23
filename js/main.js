@@ -666,5 +666,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // 3D Testimonial Card Tilt Effect
+  const init3dTilt = () => {
+    const cards = document.querySelectorAll('.testimonial-3d-card');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+      // Smooth dynamic tilt on hover
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Calculate tilt angles: max 10 degrees
+        // Positive tiltX tilts top forward when cursor is high
+        const tiltX = ((centerY - y) / centerY) * 10;
+        // Negative tiltY tilts right forward when cursor is to the right
+        const tiltY = ((x - centerX) / centerX) * -10;
+        
+        card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+
+      // Reset style on mouseenter for instant start transition
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease';
+      });
+
+      // Smooth reset on mouseleave
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease, border-color 0.3s ease';
+      });
+    });
+  };
+
   injectQuickQuoteWidget();
+  init3dTilt();
 });
+
