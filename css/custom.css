@@ -82,15 +82,58 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Image zoom effect */
+/* Image zoom effect & split slide-in door white overlay on hover */
 .zoom-container {
-  overflow: hidden;
+  position: relative !important;
+  overflow: hidden !important;
 }
+
+.zoom-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white overlay */
+  z-index: 10;
+  transform: translateX(-101%);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.zoom-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white overlay */
+  z-index: 10;
+  transform: translateX(101%);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+/* Trigger slide-in overlays and image zoom on hover */
+.group:hover .zoom-container::before,
+.zoom-container:hover::before {
+  transform: translateX(0);
+}
+
+.group:hover .zoom-container::after,
+.zoom-container:hover::after {
+  transform: translateX(0);
+}
+
 .zoom-container img {
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
+
+.group:hover .zoom-container img,
 .zoom-container:hover img {
-  transform: scale(1.08);
+  transform: scale(1.06) !important;
 }
 
 /* ==========================================
