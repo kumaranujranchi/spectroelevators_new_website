@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spectroelevators.com/sitemap.xml
+Sitemap: https://spectroelevator.com/sitemap.xml
