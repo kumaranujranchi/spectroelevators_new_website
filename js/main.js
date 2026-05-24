@@ -703,6 +703,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // 12. Smooth Scroll for Anchor Links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return; // Skip empty hash links
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
   injectQuickQuoteWidget();
   init3dTilt();
 });
