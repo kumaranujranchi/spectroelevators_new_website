@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spectro Elevators | Trusted Elevator Solutions in Bihar & Patna</title>
+  <meta name="description" content="Spectro Elevators provides premium, safe, and reliable residential and commercial elevator installation, AMC maintenance, and modernization services across Bihar.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spectro Elevators | Trusted Elevator Solutions in Bihar & Patna">
+  <meta property="og:description" content="Spectro Elevators provides premium, safe, and reliable residential and commercial elevator installation, AMC maintenance, and modernization services across Bihar.">
+  <meta property="og:image" content="assets/images/logo/spectro_logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Spectro Elevators | Trusted Elevator Solutions in Bihar & Patna">
+  <meta property="twitter:description" content="Spectro Elevators provides premium, safe, and reliable residential and commercial elevator installation, AMC maintenance, and modernization services across Bihar.">
+  <meta property="twitter:image" content="assets/images/logo/spectro_logo.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0B192C',
+            accent: '#FFC72C',
+            accentHover: '#EAB308',
+            neutralGrey: '#64748B',
+            bgTint: '#F8FAFC'
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS CSS CDN (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <style>
+    /* Infinite Logo Carousel Animation */
+    @keyframes infinite-scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+    .logo-carousel-track {
+      display: flex !important;
+      width: max-content !important;
+      animation: infinite-scroll 25s linear infinite !important;
+    }
+    .logo-carousel-track:hover {
+      animation-play-state: paused !important;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon_spectro.png" />
+</head>
+<body class="industrial-grid antialiased">
+
+  <!-- Header Section -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-custom py-5 nav-glass border-b border-white/10 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="bg-accent p-1 rounded text-primary transition-custom group-hover:bg-white w-10 h-10 flex items-center justify-center overflow-hidden">
+          <img src="assets/images/logo/favicon_spectro.png" alt="Spectro Elevators Logo" class="w-8 h-8 object-contain">
+        </div>
+        <span class="font-bold text-base sm:text-lg xl:text-xl tracking-wider font-heading">SPECTRO <span class="text-accent group-hover:text-white transition-custom">ELEVATORS</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-medium text-xs xl:text-sm whitespace-nowrap">
+        <a href="index.html" class="text-accent hover:text-accent transition-colors">Home</a>
+        <a href="products.html" class="hover:text-accent transition-colors">Lift Types</a>
+        <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+        <a href="amc.html" class="hover:text-accent transition-colors">AMC Program</a>
+        <a href="coverage.html" class="hover:text-accent transition-colors">Coverage</a>
+        <a href="blog.html" class="hover:text-accent transition-colors">Blog</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0 whitespace-nowrap">
+        <a href="tel:+919608461829" class="flex items-center gap-1.5 text-xs xl:text-sm text-slate-300 hover:text-accent transition-colors">
+          <i data-lucide="phone-call" class="w-4 h-4 text-accent shrink-0"></i>
+          <span>+91 98014 51329</span>
+        </a>
+        <a href="contact.html" class="bg-accent hover:bg-accentHover text-primary font-bold px-4 py-2 xl:px-5 xl:py-2.5 rounded transition-custom text-xs xl:text-sm shadow-lg shadow-accent/20">
+          Get Quote
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-accent transition-colors focus:outline-none" aria-label="Open Navigation Menu">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Side Drawer -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex justify-end">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-primary/70 backdrop-blur-sm" id="mobile-overlay"></div>
+    
+    <!-- Menu Content -->
+    <div class="relative w-80 max-w-xs h-full bg-primary border-l border-white/10 flex flex-col justify-between py-6 px-6 shadow-2xl text-white">
+      <div>
+        <div class="flex items-center justify-between mb-8">
+          <span class="font-bold text-lg font-heading">SPECTRO <span class="text-accent">ELEVATORS</span></span>
+          <button id="close-menu-btn" class="hover:text-accent transition-colors" aria-label="Close Navigation Menu">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        
+        <nav class="flex flex-col gap-5 text-lg font-medium">
+          <a href="index.html" class="text-accent">Home</a>
+          <a href="about.html" class="hover:text-accent transition-colors">About Us</a>
+          <a href="products.html" class="hover:text-accent transition-colors">Lift Types</a>
+          <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+          <a href="projects.html" class="hover:text-accent transition-colors">Gallery</a>
+          <a href="amc.html" class="hover:text-accent transition-colors">AMC Program</a>
+          <a href="coverage.html" class="hover:text-accent transition-colors">Coverage</a>
+          <a href="blog.html" class="hover:text-accent transition-colors">Blog</a>
+          <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+        </nav>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <a href="tel:+919608461829" class="flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded hover:bg-white/10 transition-colors">
+          <i data-lucide="phone" class="w-5 h-5 text-accent"></i>
+          <span class="font-medium text-sm">+91 98014 51329</span>
+        </a>
+        <a href="contact.html" class="bg-accent hover:bg-accentHover text-primary text-center font-bold py-3 rounded transition-custom shadow-lg">
+          Get Free Quote
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero-section" class="relative min-h-screen flex items-center bg-primary overflow-hidden text-white pt-24">
+    <!-- Hero Image/Video Background Overlay -->
+    <div class="absolute inset-0 z-0">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-65 object-center">
+        <source src="assets/video/lift.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/20 to-transparent"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-8 space-y-8" data-aos="fade-right" data-aos-duration="1000">
+        <!-- Safety Stripe Pill -->
+        <div class="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/30 text-accent px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+          Bihar's Most Trusted Elevator Brand
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none font-heading">
+          Trusted Elevator Solutions for <span class="text-accent">Residential</span> & Commercial Buildings
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+          Spectro Elevators delivers state-of-the-art vertical mobility engineering. We build passenger, freight, and residential home lifts designed with premium European safety components and ISO certification.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="contact.html" class="btn-quote-hero group bg-accent text-primary font-bold px-8 py-4 rounded-lg flex items-center gap-2 shadow-xl shadow-accent/20">
+            <span>Get Free Quote</span>
+            <i data-lucide="file-text" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
+          <a href="tel:+919608461829" class="btn-call-hero group border-2 border-white/20 text-white font-bold px-8 py-4 rounded-lg flex items-center gap-2">
+            <i data-lucide="phone-call" class="w-5 h-5 transition-transform duration-300 group-hover:rotate-12"></i>
+            <span>Call Now</span>
+          </a>
+          <a href="https://wa.me/919608461829?text=Hello%20Spectro%20Elevators%2C%20I%20am%20interested%20in%20installing%20a%20new%20lift." target="_blank" class="btn-whatsapp-hero group bg-[#25D366] text-white font-bold px-8 py-4 rounded-lg flex items-center gap-2 shadow-lg shadow-green-500/10">
+            <i data-lucide="message-square" class="w-5 h-5 transition-transform duration-300 group-hover:scale-110"></i>
+            <span>WhatsApp Us</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Contact Card -->
+      <div class="lg:col-span-4" data-aos="fade-left" data-aos-duration="1000">
+        <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+          <div class="absolute -top-12 -right-12 w-24 h-24 bg-accent/10 rounded-full blur-xl"></div>
+          
+          <h3 class="text-xl font-bold font-heading mb-4 text-white flex items-center gap-2">
+            <i data-lucide="mail-question" class="text-accent"></i>
+            Quick Callback
+          </h3>
+          <p class="text-sm text-slate-300 mb-6">Leave your details and our technical expert will call you back within 15 minutes.</p>
+          
+          <form class="inquiry-form space-y-4" data-source="Hero Form" name="inquiry-leads" data-netlify="true">
+            <input type="hidden" name="lift_type" value="Quick Callback">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1" for="hero-name">Full Name</label>
+              <input id="hero-name" type="text" name="name" required placeholder="e.g. Anuj Kumar" class="w-full bg-primary/40 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1" for="hero-phone">Phone Number</label>
+              <input id="hero-phone" type="tel" name="phone" required placeholder="e.g. 98765 XXXXX" class="w-full bg-primary/40 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm">
+            </div>
+            <button type="submit" class="w-full bg-accent hover:bg-accentHover text-primary font-bold py-3 rounded-lg transition-custom text-sm shadow-md mt-2">
+              Request Call Back
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Logos Section (Infinite Smooth Marquee) -->
+  <section class="py-24 bg-bgTint border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4" data-aos="fade-up">
+        <div class="flex justify-center">
+          <span class="inline-flex items-center gap-1.5 bg-primary/5 border border-primary/10 text-primary font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+            World-Class Standards
+          </span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-primary font-heading">
+          Our Technology & Component Partners
+        </h2>
+        <p class="text-slate-600 text-sm max-w-2xl mx-auto leading-relaxed">
+          We collaborate with world-leading European and global engineering manufacturers to ensure maximum safety, smooth vertical mobility, and long-lasting durability for every lift installation.
+        </p>
+      </div>
+      
+      <!-- Infinite Logo Carousel -->
+      <div class="logo-marquee-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="logo-carousel-track">
+          <!-- First Set of 11 Logos -->
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/1.png" alt="Usha Martin Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/2.png" alt="ADCO Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/3.png" alt="Montanari Lifts Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/4.png" alt="Sharp Engineers Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/5.png" alt="Arkel Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/6.png" alt="Monarch Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/7.png" alt="Fermator Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/8.png" alt="Monteferro Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/9.png" alt="Bharat Bijlee Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/10.png" alt="Philbrick Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/11.png" alt="Moris Logo">
+          </div>
+          
+          <!-- Second Set of 11 Logos (Duplicated for Seamless Loop) -->
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/1.png" alt="Usha Martin Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/2.png" alt="ADCO Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/3.png" alt="Montanari Lifts Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/4.png" alt="Sharp Engineers Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/5.png" alt="Arkel Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/6.png" alt="Monarch Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/7.png" alt="Fermator Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/8.png" alt="Monteferro Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/9.png" alt="Bharat Bijlee Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/10.png" alt="Philbrick Logo">
+          </div>
+          <div class="partner-logo-card">
+            <img src="assets/images/partner-logo/11.png" alt="Moris Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Introduction Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-16 items-center">
+        <!-- Visuals Grid -->
+        <div class="lg:col-span-6 relative" data-aos="fade-right">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=400&q=80" alt="Mechanical elevator parts calibration" class="rounded-xl shadow-lg w-full h-48 object-cover">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" alt="Modern glass commercial building" class="rounded-xl shadow-lg w-full h-64 object-cover">
+            </div>
+            <div class="space-y-4 pt-8">
+              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=400&q=80" alt="Technical maintenance team" class="rounded-xl shadow-lg w-full h-64 object-cover">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80" alt="ISO quality check" class="rounded-xl shadow-lg w-full h-48 object-cover">
+            </div>
+          </div>
+          <!-- Years of Experience badge -->
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white p-6 rounded-2xl border-4 border-white shadow-2xl text-center max-w-[160px] animate-float">
+            <span class="block text-4xl font-extrabold text-accent font-heading">15+</span>
+            <span class="block text-xs uppercase font-bold tracking-wider mt-1 text-slate-300">Years of Engineering Excellence</span>
+          </div>
+        </div>
+
+        <!-- Copy -->
+        <div class="lg:col-span-6 space-y-8" data-aos="fade-left">
+          <div class="space-y-2">
+            <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Who We Are</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-primary font-heading">Setting High Standards in Vertical Transportation</h2>
+          </div>
+          
+          <p class="text-slate-600 leading-relaxed">
+            Founded with a vision to build safe, durable, and highly efficient lifts, Spectro Elevators has grown into Bihar's leading vertical transportation specialist. From elegant home lifts to complex high-capacity freight elevators, we design, manufacture, install, and support them all under strict ISO standards.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="flex gap-4 items-start">
+              <div class="bg-slate-100 p-2.5 rounded text-primary">
+                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">ISO Quality Standards</h4>
+                <p class="text-xs text-slate-500 mt-1">Strict adhering to safety rules & CE certification guidelines.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4 items-start">
+              <div class="bg-slate-100 p-2.5 rounded text-primary">
+                <i data-lucide="map-pin" class="w-6 h-6 text-accent"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">Bihar Coverage</h4>
+                <p class="text-xs text-slate-500 mt-1">Service locations in Patna, Muzaffarpur, Gaya, Bhagalpur, and Purnia.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-start">
+              <div class="bg-slate-100 p-2.5 rounded text-primary">
+                <i data-lucide="cpu" class="w-6 h-6 text-indigo-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">Latest MRL Tech</h4>
+                <p class="text-xs text-slate-500 mt-1">Space-saving Machine Room-less solutions for villas & buildings.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-start">
+              <div class="bg-slate-100 p-2.5 rounded text-primary">
+                <i data-lucide="clock" class="w-6 h-6 text-rose-500"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">24x7 Customer Support</h4>
+                <p class="text-xs text-slate-500 mt-1">Active emergency rescue services available 365 days a year.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lift Categories Section -->
+  <section class="py-24 bg-bgTint border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4" data-aos="fade-up">
+        <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Our Products</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-primary font-heading">Elevator Categories Built for Bihar's Demands</h2>
+        <p class="text-slate-600">Explore our range of elevators. We custom-build every project with state-of-the-art tech and safety components.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Passenger Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="zoom-container h-48 bg-slate-200 relative">
+            <img src="assets/images/lifts/passanger lift.png" alt="Modern passenger elevator cabin interior" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded">Popular</div>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Passenger Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Smooth, fast, and highly reliable elevators for high-rise residential apartments and busy office complexes.</p>
+            <a href="products.html#passenger" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Hospital Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/Hospital Lift.png" alt="Hospital elevator wide entry door" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Hospital Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Wide cabin structure optimized to accommodate stretchers, beds, medical staff, and sensitive equipment safely.</p>
+            <a href="products.html#hospital" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Goods/Freight Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/goods lift.png" alt="Heavy freight cargo elevator loading" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Goods/Freight Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Heavy-duty steel construction built to transport materials in factories, warehouses, and shopping malls.</p>
+            <a href="products.html#goods" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- MRL Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/mrl lift.png" alt="Machine roomless elevator controller" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">MRL Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Machine Room-Less (MRL) gearless lifts that save valuable space, operate silently, and reduce energy consumption by 40%.</p>
+            <a href="products.html#mrl" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Home Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/home lift.png" alt="Luxury home elevator glass cabin" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Home Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Compact, single-phase lifts for duplex villas and bungalows. Minimal civil work required, runs on standard electricity.</p>
+            <a href="products.html#home" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Capsule Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/capsul lift.png" alt="Scenic glass capsule elevator" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Capsule Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Scenic glass elevators that elevate the aesthetic appeal of commercial malls, hotels, and luxury complexes.</p>
+            <a href="products.html#capsule" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Hydraulic Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/Hydraulic Lift.png" alt="Hydraulic piston mechanisms" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Hydraulic Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Excellent load-carrying capacity with smooth starts and stops. Best suited for low-rise commercial structures.</p>
+            <a href="products.html#hydraulic" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Automobile Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/automobile lift.png" alt="Car elevator lift mechanism" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Automobile Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Super-reinforced car elevators built for multi-level parking showrooms and luxury auto garages.</p>
+            <a href="products.html#automobile" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Lift / Dumbwaiter -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/lifts/dumbwaiter service lift .png" alt="Stainless steel kitchen dumbwaiter lift" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Service Lift / Dumbwaiter</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Compact lift for transporting food, laundry, documents, and small items between floors. Ideal for hotels, clinics, and residences.</p>
+            <a href="products.html#service" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Outdoor Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/outdoor_lift.png" alt="Panoramic outdoor glass elevator on facade" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Outdoor Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Weather-proof, exterior glass or steel elevators built to withstand external weather conditions and offer beautiful scenic views.</p>
+            <a href="products.html#outdoor" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Stair Lift / Chair Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/stair_lift.png" alt="Sleek residential staircase chair lift" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Stair Lift / Chair Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Reliable and space-saving mobility solution for elderly and disabled individuals to safely navigate staircases.</p>
+            <a href="products.html#stair" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Pneumatic Vacuum Lift -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-custom transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
+          <div class="zoom-container h-48 bg-slate-200">
+            <img src="assets/images/vacuum_lift.png" alt="Circular pneumatic vacuum elevator in luxury living room" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="font-bold text-xl text-primary font-heading">Pneumatic Vacuum Lift</h3>
+            <p class="text-sm text-slate-500 line-clamp-3">Futuristic, air-driven circular lifts requiring zero pit or machine room. Perfect for luxury penthouses and duplex homes.</p>
+            <a href="products.html#vacuum" class="w-full block text-center bg-slate-100 hover:bg-accent hover:text-primary text-primary font-bold py-2.5 rounded transition-custom text-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-24 bg-primary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4" data-aos="fade-up">
+        <span class="text-sm font-bold text-accent uppercase tracking-wider bg-white/5 border border-white/10 px-3 py-1 rounded">Our Services</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight font-heading">Lifetime Support for Your Vertical Systems</h2>
+        <p class="text-slate-300">From the initial architectural survey and engineering drawings to prompt AMC inspections and breakdowns, we handle everything.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Block 1 -->
+        <div class="bg-white/5 border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-custom" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-accent/10 border border-accent/20 w-12 h-12 rounded flex items-center justify-center text-accent mb-6">
+            <i data-lucide="wrench" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading mb-3">Professional Installation</h3>
+          <p class="text-slate-400 text-sm mb-4">Precision layout alignment, heavy-duty brackets, structural welding, and multi-checkpoint safety testing for long service life.</p>
+          <a href="services.html#installation" class="text-accent hover:text-white inline-flex items-center gap-1 text-sm font-bold">
+            Read More <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service Block 2 -->
+        <div class="bg-white/5 border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-custom" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-accent/10 border border-accent/20 w-12 h-12 rounded flex items-center justify-center text-accent mb-6">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading mb-3">AMC & Maintenance</h3>
+          <p class="text-slate-400 text-sm mb-4">Structured monthly cleaning, oil check-ups, safety relay testing, and emergency brake inspection to ensure near-zero downtime.</p>
+          <a href="services.html#amc" class="text-accent hover:text-white inline-flex items-center gap-1 text-sm font-bold">
+            Read More <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service Block 3 -->
+        <div class="bg-white/5 border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-custom" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-accent/10 border border-accent/20 w-12 h-12 rounded flex items-center justify-center text-accent mb-6">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading mb-3">Fast Repairs</h3>
+          <p class="text-slate-400 text-sm mb-4">Immediate diagnosis and component swapping by local engineering teams located across Patna and other major cities of Bihar.</p>
+          <a href="services.html#repair" class="text-accent hover:text-white inline-flex items-center gap-1 text-sm font-bold">
+            Read More <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service Block 4 -->
+        <div class="bg-white/5 border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-custom" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-accent/10 border border-accent/20 w-12 h-12 rounded flex items-center justify-center text-accent mb-6">
+            <i data-lucide="settings-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading mb-3">Modernization</h3>
+          <p class="text-slate-400 text-sm mb-4">Convert old noisy traction lifts into sleek, energy-efficient gearless VVVF drive systems with smart touch controllers.</p>
+          <a href="services.html#modernization" class="text-accent hover:text-white inline-flex items-center gap-1 text-sm font-bold">
+            Read More <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service Block 5 -->
+        <div class="bg-white/5 border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-custom" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-accent/10 border border-accent/20 w-12 h-12 rounded flex items-center justify-center text-accent mb-6">
+            <i data-lucide="phone-call" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading mb-3">Emergency Support</h3>
+          <p class="text-slate-400 text-sm mb-4">Active 24x7 emergency rescue department. Dedicated vans with safety technicians for rapid responses during lift blockages.</p>
+          <a href="services.html#emergency" class="text-accent hover:text-white inline-flex items-center gap-1 text-sm font-bold">
+            Read More <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service Block 6 -->
+        <div class="bg-white/5 border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-custom" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-accent/10 border border-accent/20 w-12 h-12 rounded flex items-center justify-center text-accent mb-6">
+            <i data-lucide="package" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading mb-3">Genuine Spare Parts</h3>
+          <p class="text-slate-400 text-sm mb-4">Direct manufacturer-backed delivery of ropes, guide rails, control boards, locks, and automatic door motors with warranty.</p>
+          <a href="services.html#spares" class="text-accent hover:text-white inline-flex items-center gap-1 text-sm font-bold">
+            Read More <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-16 items-center">
+        <!-- Content -->
+        <div class="lg:col-span-7 space-y-8" data-aos="fade-right">
+          <div class="space-y-2">
+            <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Why Spectro</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-primary font-heading">Engineered for Safety, Designed for Comfort</h2>
+            <p class="text-slate-600">With dozens of successful elevator setups in apartments, offices, and bungalows across Bihar, we prioritize structural stability and passenger safety above all else.</p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Point 1 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">ISO Quality Certification</h4>
+                <p class="text-xs text-slate-500 mt-1">Our elevators undergo 45+ safety checks prior to handover.</p>
+              </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">Experienced Engineers</h4>
+                <p class="text-xs text-slate-500 mt-1">Certified installation veterans with years of elevator expertise.</p>
+              </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="zap" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">Fast Deployment</h4>
+                <p class="text-xs text-slate-500 mt-1">Efficient timelines from structural design to initial testing.</p>
+              </div>
+            </div>
+
+            <!-- Point 4 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">24x7 Emergency Line</h4>
+                <p class="text-xs text-slate-500 mt-1">Dedicated helpline for stuck elevator emergencies.</p>
+              </div>
+            </div>
+
+            <!-- Point 5 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="indian-rupee" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">Affordable Pricing</h4>
+                <p class="text-xs text-slate-500 mt-1">Premium quality systems with cost-efficient maintenance packages.</p>
+              </div>
+            </div>
+
+            <!-- Point 6 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="shield-alert" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">Safety First Tech</h4>
+                <p class="text-xs text-slate-500 mt-1">Equipped with ARD (Auto Rescue Device) for power outage safety.</p>
+              </div>
+            </div>
+
+            <!-- Point 7 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">Pan-Bihar Service Network</h4>
+                <p class="text-xs text-slate-500 mt-1">Quick mobilization of maintenance technicians to any district.</p>
+              </div>
+            </div>
+
+            <!-- Point 8 -->
+            <div class="flex gap-4">
+              <div class="text-accent bg-primary p-2.5 rounded shrink-0 w-11 h-11 flex items-center justify-center">
+                <i data-lucide="layout" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base">Custom Cabin Designs</h4>
+                <p class="text-xs text-slate-500 mt-1">Stainless steel, gold etched, or scenic glass cabins designed to order.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Big stats / Badge image -->
+        <div class="lg:col-span-5 relative" data-aos="fade-left">
+          <div class="bg-primary text-white rounded-2xl overflow-hidden p-8 shadow-2xl relative">
+            <div class="absolute inset-0 safety-stripes opacity-5 -skew-y-12"></div>
+            <div class="relative z-10 space-y-8">
+              <div class="border-b border-white/10 pb-6">
+                <span class="text-6xl font-extrabold text-accent stat-counter font-heading" data-target="450" data-suffix="+">0+</span>
+                <span class="block text-sm uppercase tracking-wider text-slate-400 mt-2 font-bold">Successful Installations</span>
+              </div>
+              
+              <div class="border-b border-white/10 pb-6">
+                <span class="text-6xl font-extrabold text-accent stat-counter font-heading" data-target="15" data-suffix="+">0+</span>
+                <span class="block text-sm uppercase tracking-wider text-slate-400 mt-2 font-bold">Cities Served in Bihar</span>
+              </div>
+
+              <div>
+                <span class="text-6xl font-extrabold text-accent stat-counter font-heading" data-target="250" data-suffix="+">0+</span>
+                <span class="block text-sm uppercase tracking-wider text-slate-400 mt-2 font-bold">Happy Building Owners</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects/Gallery Section -->
+  <section class="py-24 bg-bgTint border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-aos="fade-up">
+        <div class="space-y-4 max-w-2xl">
+          <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Our Gallery</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-primary font-heading">Recent Site Installations & Modernization Projects</h2>
+          <p class="text-slate-600">Browse through some of our high-quality lift setups, mechanical rooms, and cabin models installed in Patna and other parts of Bihar.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap gap-2 shrink-0">
+          <button class="filter-btn px-5 py-2.5 rounded-lg text-sm font-bold transition-custom bg-yellow-400 text-slate-900" data-filter="all">All</button>
+          <button class="filter-btn px-5 py-2.5 rounded-lg text-sm font-bold transition-custom bg-slate-800 text-white hover:bg-slate-700" data-filter="passenger">Passenger</button>
+          <button class="filter-btn px-5 py-2.5 rounded-lg text-sm font-bold transition-custom bg-slate-800 text-white hover:bg-slate-700" data-filter="home">Home / Villa</button>
+          <button class="filter-btn px-5 py-2.5 rounded-lg text-sm font-bold transition-custom bg-slate-800 text-white hover:bg-slate-700" data-filter="commercial">Commercial</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Item 1 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="passenger" data-aos="zoom-in" data-aos-delay="100">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Apartment lift setup Patna" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 border-t border-slate-100">
+            <span class="text-xs font-bold text-accent uppercase bg-primary px-2 py-0.5 rounded">Passenger Lift</span>
+            <h4 class="font-bold text-lg text-primary mt-2">10-Passenger Auto-Door Lift</h4>
+            <p class="text-xs text-slate-500 mt-1">Installed at Ashiana Nagar Apartment Complex, Patna</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="home" data-aos="zoom-in" data-aos-delay="200">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/home lift.png" alt="Private bungalow home lift Gaya" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 border-t border-slate-100">
+            <span class="text-xs font-bold text-accent uppercase bg-primary px-2 py-0.5 rounded">Home Lift</span>
+            <h4 class="font-bold text-lg text-primary mt-2">Glass Cabin Scenic Lift</h4>
+            <p class="text-xs text-slate-500 mt-1">Installed at Luxury Bungalow, AP Colony, Gaya</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="commercial" data-aos="zoom-in" data-aos-delay="300">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/Hospital Lift.png" alt="Hospital elevator Muzaffarpur" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 border-t border-slate-100">
+            <span class="text-xs font-bold text-accent uppercase bg-primary px-2 py-0.5 rounded">Commercial</span>
+            <h4 class="font-bold text-lg text-primary mt-2">Stretcher Elevator (1500kg)</h4>
+            <p class="text-xs text-slate-500 mt-1">Installed at City Hospital, Muzaffarpur</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="passenger" data-aos="zoom-in" data-aos-delay="100">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/passanger lift.png" alt="Traction elevator installation" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 border-t border-slate-100">
+            <span class="text-xs font-bold text-accent uppercase bg-primary px-2 py-0.5 rounded">Passenger Lift</span>
+            <h4 class="font-bold text-lg text-primary mt-2">Gearless VVVF Passenger Lift</h4>
+            <p class="text-xs text-slate-500 mt-1">Installed at Commercial Plaza, Fraser Road, Patna</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="home" data-aos="zoom-in" data-aos-delay="200">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/home lift.png" alt="Hydraulic duplex elevator" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 border-t border-slate-100">
+            <span class="text-xs font-bold text-accent uppercase bg-primary px-2 py-0.5 rounded">Home Lift</span>
+            <h4 class="font-bold text-lg text-primary mt-2">MRL Compact Duplex Lift</h4>
+            <p class="text-xs text-slate-500 mt-1">Installed at Villa Project, Bhagalpur</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="commercial" data-aos="zoom-in" data-aos-delay="300">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=600&q=80" alt="Modernization gearless machine" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 border-t border-slate-100">
+            <span class="text-xs font-bold text-accent uppercase bg-primary px-2 py-0.5 rounded">Commercial</span>
+            <h4 class="font-bold text-lg text-primary mt-2">Old Lift VVVF Modernization</h4>
+            <p class="text-xs text-slate-500 mt-1">Completed at Government Office Complex, Patna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-24 testimonials-custom-bg overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3" data-aos="fade-up">
+        <p class="text-xs sm:text-sm text-slate-500 tracking-wide font-medium uppercase">2,157+ building owners have said how good Spectro is</p>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 font-heading">Our happy clients say about us</h2>
+      </div>
+
+      <div class="relative">
+        <!-- Glowing colorful gradient background -->
+        <div class="absolute -inset-y-6 -inset-x-8 bg-gradient-to-r from-emerald-400 via-cyan-500 via-indigo-500 via-purple-500 via-pink-500 via-rose-400 to-yellow-300 blur-3xl opacity-65 rounded-3xl -z-10"></div>
+        
+        <div class="grid md:grid-cols-3 gap-8 relative z-10 perspective-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-3d-card p-8 sm:p-10 rounded-2xl flex flex-col justify-between space-y-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex text-[#FBBF24] gap-0.5 tilt-stars">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+
+            <p class="text-slate-700 text-base leading-relaxed flex-grow font-medium tilt-text">“We installed an 8-passenger automatic door lift in our residential apartment in Patna. The ride quality is extremely smooth, and the VVVF drive is completely silent. Highly recommended!”</p>
+
+            <div class="flex items-center gap-3 pt-2 tilt-profile">
+              <img class="w-11 h-11 rounded-full object-cover border border-slate-100" src="assets/images/testimonials/rajesh.png" alt="Rajesh Ranjan">
+              <div>
+                <h4 class="font-bold text-sm text-slate-900 leading-tight">Rajesh Ranjan</h4>
+                <p class="text-xs text-slate-500">Secretary, Shanti Heights, Patna</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-3d-card p-8 sm:p-10 rounded-2xl flex flex-col justify-between space-y-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex text-[#FBBF24] gap-0.5 tilt-stars">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+
+            <p class="text-slate-700 text-base leading-relaxed flex-grow font-medium tilt-text">“Our hospital required a heavy stretcher lift with custom dimensions. Spectro Elevators designed and installed it within our timeline. Their technician lives close by and AMC service is prompt.”</p>
+
+            <div class="flex items-center gap-3 pt-2 tilt-profile">
+              <img class="w-11 h-11 rounded-full object-cover border border-slate-100" src="assets/images/testimonials/amit.png" alt="Dr. Amit K. Sinha">
+              <div>
+                <h4 class="font-bold text-sm text-slate-900 leading-tight">Dr. Amit K. Sinha</h4>
+                <p class="text-xs text-slate-500">Director, Medipark Hospital, Muzaffarpur</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-3d-card p-8 sm:p-10 rounded-2xl flex flex-col justify-between space-y-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex text-[#FBBF24] gap-0.5 tilt-stars">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+
+            <p class="text-slate-700 text-base leading-relaxed flex-grow font-medium tilt-text">“We wanted a scenic glass capsule lift for our luxury duplex villa. The engineering team custom-designed it to fit our stairs structure. It looks gorgeous and runs perfectly on single-phase power.”</p>
+
+            <div class="flex items-center gap-3 pt-2 tilt-profile">
+              <img class="w-11 h-11 rounded-full object-cover border border-slate-100" src="assets/images/testimonials/vikram.png" alt="Vikram Aditya">
+              <div>
+                <h4 class="font-bold text-sm text-slate-900 leading-tight">Vikram Aditya</h4>
+                <p class="text-xs text-slate-500">Villa Owner, Shastri Nagar, Patna</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom link -->
+      <div class="text-center mt-14" data-aos="fade-up">
+        <a href="contact.html" class="inline-block text-slate-900 hover:text-accent font-bold text-sm border-b-2 border-slate-900 hover:border-accent pb-1 transition-all">
+          Check all 2,157 reviews
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 bg-bgTint border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 space-y-4" data-aos="fade-up">
+        <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">FAQ</span>
+        <h2 class="text-3xl font-bold tracking-tight text-primary font-heading">Frequently Asked Questions</h2>
+        <p class="text-slate-600">Find answers to common questions about installing and maintaining elevators in Bihar.</p>
+      </div>
+
+      <div class="space-y-4" data-aos="fade-up">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-button w-full px-6 py-5 text-left font-bold text-primary flex items-center justify-between focus:outline-none">
+            <span>What is the minimum civil work required for a home lift?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-slate-600 text-sm border-t border-slate-100 pt-4 leading-relaxed">
+            For modern home lifts, specifically Machine Room-Less (MRL) and hydraulic lifts, minimal civil work is needed. In many cases, we do not require a deep pit (only 150mm to 300mm is sufficient) or an overhead machine room. They can be installed inside a self-supporting steel structure alongside your staircase.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-button w-full px-6 py-5 text-left font-bold text-primary flex items-center justify-between focus:outline-none">
+            <span>How does the Auto Rescue Device (ARD) operate during a power failure?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-slate-600 text-sm border-t border-slate-100 pt-4 leading-relaxed">
+            An Auto Rescue Device (ARD) is a critical safety system. If utility power goes out while the lift is running, the ARD automatically switches on using an emergency battery pack. It runs the elevator cabin slowly to the nearest landing floor, opens the automatic doors, and safely evacuates the passengers before turning off.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-button w-full px-6 py-5 text-left font-bold text-primary flex items-center justify-between focus:outline-none">
+            <span>What are the standard packages for AMC (Annual Maintenance)?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-slate-600 text-sm border-t border-slate-100 pt-4 leading-relaxed">
+            We offer two main packages:
+            <ul class="list-disc list-inside mt-2 space-y-1">
+              <li><strong>Semi-Comprehensive AMC:</strong> Includes monthly maintenance checks, oil and grease servicing, and emergency breakdown support. Parts are charged extra.</li>
+              <li><strong>Comprehensive AMC:</strong> Covers monthly servicing, breakdown calls, plus all major mechanical and electronic parts (like control cards, motors, ropes, and locks) replaced free of charge.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-button w-full px-6 py-5 text-left font-bold text-primary flex items-center justify-between focus:outline-none">
+            <span>Can a residential elevator run on standard household single-phase electricity?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-slate-600 text-sm border-t border-slate-100 pt-4 leading-relaxed">
+            Yes! Our home lifts are engineered with high-efficiency gearless permanent magnet synchronous motors (PMSM) or hydraulic power packs that can operate on standard 220V single-phase domestic power supply. They require very little energy, similar to a 1.5-ton household air conditioner.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="py-20 bg-primary text-white relative overflow-hidden border-t-4 border-accent">
+    <div class="absolute inset-0 safety-stripes opacity-5 -skew-y-6"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8" data-aos="zoom-in">
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading">Need Elevator Installation or AMC for Your Building?</h2>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto">Get in touch with our certified engineering team to arrange a free structural site visit, engineering calculation, and comprehensive quote.</p>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="bg-accent hover:bg-accentHover text-primary font-bold px-8 py-4 rounded-lg transition-custom flex items-center gap-2 shadow-xl shadow-accent/25">
+          <i data-lucide="calculator" class="w-5 h-5"></i>
+          <span>Request Callback</span>
+        </a>
+        <a href="https://wa.me/919608461829?text=I%20want%20to%20schedule%20a%20site%20visit%20for%20elevator%20installation." target="_blank" class="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-8 py-4 rounded-lg transition-custom flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-primary text-slate-400 border-t border-white/10 pt-16 pb-8 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 pb-16">
+      
+      <!-- Company Bio -->
+      <div class="md:col-span-4 space-y-6">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="bg-accent p-1 rounded text-primary w-8 h-8 flex items-center justify-center overflow-hidden">
+            <img src="assets/images/logo/favicon_spectro.png" alt="Spectro Elevators Logo" class="w-6 h-6 object-contain">
+          </div>
+          <span class="font-bold text-lg text-white tracking-wider font-heading">SPECTRO <span class="text-accent">ELEVATORS</span></span>
+        </a>
+        <p class="text-slate-400 leading-relaxed text-xs">
+          Spectro Elevators is Bihar's premier engineering firm specializing in safe, energy-efficient, and ISO certified vertical transportation designs for multi-family flats, duplex villas, hospitals, and commercial structures.
+        </p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/spectroelevators/" target="_blank" class="bg-white/5 border border-white/10 p-2 rounded hover:bg-accent hover:text-primary transition-custom" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://www.instagram.com/spectroelevator/" target="_blank" class="bg-white/5 border border-white/10 p-2 rounded hover:bg-accent hover:text-primary transition-custom" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://www.youtube.com/@spectroelevator" target="_blank" class="bg-white/5 border border-white/10 p-2 rounded hover:bg-accent hover:text-primary transition-custom" aria-label="Youtube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="md:col-span-2 space-y-4">
+        <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider border-l-2 border-accent pl-2">Quick Links</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-accent transition-colors">About Us</a></li>
+          <li><a href="products.html" class="hover:text-accent transition-colors">Lift Types</a></li>
+          <li><a href="services.html" class="hover:text-accent transition-colors">Services</a></li>
+          <li><a href="projects.html" class="hover:text-accent transition-colors">Gallery</a></li>
+          <li><a href="amc.html" class="hover:text-accent transition-colors">AMC Program</a></li>
+          <li><a href="coverage.html" class="hover:text-accent transition-colors">Service Coverage</a></li>
+          <li><a href="blog.html" class="hover:text-accent transition-colors">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-accent transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider border-l-2 border-accent pl-2">Corporate Office</h4>
+        <ul class="space-y-3.5 text-xs text-slate-400">
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
+            <div>
+              <span>103, K Devraksh, Bailey Rd, Anandi Vihar Colony, Rukanpura, Patna, Bihar 800014</span>
+              <a href="https://maps.app.goo.gl/WnvAjpXEfTzqVLkc9" target="_blank" class="block text-accent hover:underline text-[10px] font-semibold mt-1">View location on Google Maps &rarr;</a>
+            </div>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-4 h-4 text-accent shrink-0"></i>
+            <a href="tel:+919608461829" class="hover:text-accent">+91 98014 51329</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="mail" class="w-4 h-4 text-accent shrink-0"></i>
+            <a href="mailto:spectro.elevator@gmail.com" class="hover:text-accent">spectro.elevator@gmail.com</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="clock" class="w-4 h-4 text-accent shrink-0"></i>
+            <span>24/7 Breakdown Response</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Map Embed (Styled for theme) -->
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider border-l-2 border-accent pl-2">Find Us on Map</h4>
+        <div class="w-full h-32 rounded-lg overflow-hidden border border-white/10 opacity-70 hover:opacity-100 transition-opacity">
+          <!-- Mock map embed for Patna Dak Bunglow -->
+          <iframe src="https://maps.google.com/maps?q=103,%20K.D.%20Market,%20Bailey%20Rd,%20Adarsh%20Vihar%20Colony,%20Rukanpura,%20Patna,%20Bihar%20800014&t=&z=16&ie=UTF8&iwloc=&output=embed" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lower Footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Spectro Elevators Private Limited. All Rights Reserved. | Design and Maintained by - <a href="https://www.synergybrandarchitect.in" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors font-semibold">Synergy Brand Architect</a></p>
+      <div class="flex gap-6">
+        <a href="seo-patna-passenger-lift.html" class="hover:underline">Passenger Lift in Patna</a>
+        <a href="seo-bihar-home-lift.html" class="hover:underline">Home Lift Installation Bihar</a>
+        <a href="#" class="hover:underline">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Widget (Animated) -->
+  <a href="https://wa.me/919608461829?text=Hello%20Spectro%20Elevators%2C%20I%20need%20elevator%20services." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform animate-bounce duration-1000" aria-label="Contact us on WhatsApp">
+    <i data-lucide="message-square" class="w-6 h-6"></i>
+    <!-- Notification Dot -->
+    <span class="absolute -top-1 -right-1 w-4 h-4 bg-rose-600 rounded-full border border-white flex items-center justify-center text-[9px] font-bold">1</span>
+  </a>
+
+  <!-- Script Imports -->
+  <!-- AOS JS (Animate on Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP Core (GreenSock) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- GSAP ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.377.0"></script>
+  
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-out-cubic'
+    });
+
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // GSAP Animations (Hero entrance)
+    gsap.from("#main-header", { y: -100, opacity: 0, duration: 1, ease: "power3.out" });
+  </script>
+
+  <!-- Netlify Form Detection for WhatsApp Leads -->
+  <form name="whatsapp-leads" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="text" name="message" />
+    <input type="text" name="source" />
+  </form>
+  <!-- Netlify Form Detection for Quick Quote Leads -->
+  <form name="quick-quote-leads" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="text" name="product" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

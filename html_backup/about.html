@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Spectro Elevators - Bihar's Leading Elevator Brand</title>
+  <meta name="description" content="Learn about Spectro Elevators' journey, our mission for absolute safety, ISO compliance, and our certified team installing lifts across Patna and Bihar.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | Spectro Elevators - Bihar's Leading Elevator Brand">
+  <meta property="og:description" content="Learn about Spectro Elevators' journey, our mission for absolute safety, ISO compliance, and our certified team installing lifts across Patna and Bihar.">
+  <meta property="og:image" content="assets/images/logo/spectro_logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="About Us | Spectro Elevators - Bihar's Leading Elevator Brand">
+  <meta property="twitter:description" content="Learn about Spectro Elevators' journey, our mission for absolute safety, ISO compliance, and our certified team installing lifts across Patna and Bihar.">
+  <meta property="twitter:image" content="assets/images/logo/spectro_logo.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0B192C',
+            accent: '#FFC72C',
+            accentHover: '#EAB308',
+            neutralGrey: '#64748B',
+            bgTint: '#F8FAFC'
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS CSS CDN (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon_spectro.png" />
+</head>
+<body class="industrial-grid antialiased">
+
+  <!-- Header Section -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-custom py-5 nav-glass border-b border-white/10 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="bg-accent p-1 rounded text-primary transition-custom group-hover:bg-white w-10 h-10 flex items-center justify-center overflow-hidden">
+          <img src="assets/images/logo/favicon_spectro.png" alt="Spectro Elevators Logo" class="w-8 h-8 object-contain">
+        </div>
+        <span class="font-bold text-base sm:text-lg xl:text-xl tracking-wider font-heading">SPECTRO <span class="text-accent group-hover:text-white transition-custom">ELEVATORS</span></span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-medium text-xs xl:text-sm whitespace-nowrap">
+        <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="products.html" class="hover:text-accent transition-colors">Lift Types</a>
+        <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+        <a href="amc.html" class="hover:text-accent transition-colors">AMC Program</a>
+        <a href="coverage.html" class="hover:text-accent transition-colors">Coverage</a>
+        <a href="blog.html" class="hover:text-accent transition-colors">Blog</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0 whitespace-nowrap">
+        <a href="tel:+919608461829" class="flex items-center gap-1.5 text-xs xl:text-sm text-slate-300 hover:text-accent transition-colors">
+          <i data-lucide="phone-call" class="w-4 h-4 text-accent shrink-0"></i>
+          <span>+91 98014 51329</span>
+        </a>
+        <a href="contact.html" class="bg-accent hover:bg-accentHover text-primary font-bold px-4 py-2 xl:px-5 xl:py-2.5 rounded transition-custom text-xs xl:text-sm shadow-lg shadow-accent/20">
+          Get Quote
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-accent transition-colors focus:outline-none" aria-label="Open Navigation Menu">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Side Drawer -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex justify-end">
+    <div class="absolute inset-0 bg-primary/70 backdrop-blur-sm" id="mobile-overlay"></div>
+    <div class="relative w-80 max-w-xs h-full bg-primary border-l border-white/10 flex flex-col justify-between py-6 px-6 shadow-2xl text-white">
+      <div>
+        <div class="flex items-center justify-between mb-8">
+          <span class="font-bold text-lg font-heading">SPECTRO <span class="text-accent">ELEVATORS</span></span>
+          <button id="close-menu-btn" class="hover:text-accent transition-colors" aria-label="Close Navigation Menu">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-5 text-lg font-medium">
+          <a href="index.html" class="hover:text-accent">Home</a>
+          <a href="about.html" class="text-accent">About Us</a>
+          <a href="products.html" class="hover:text-accent transition-colors">Lift Types</a>
+          <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+          <a href="projects.html" class="hover:text-accent transition-colors">Gallery</a>
+          <a href="amc.html" class="hover:text-accent transition-colors">AMC Program</a>
+          <a href="coverage.html" class="hover:text-accent transition-colors">Coverage</a>
+          <a href="blog.html" class="hover:text-accent transition-colors">Blog</a>
+          <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+        </nav>
+      </div>
+      <div class="flex flex-col gap-4">
+        <a href="tel:+919608461829" class="flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded hover:bg-white/10 transition-colors">
+          <i data-lucide="phone" class="w-5 h-5 text-accent"></i>
+          <span class="font-medium text-sm">+91 98014 51329</span>
+        </a>
+        <a href="contact.html" class="bg-accent hover:bg-accentHover text-primary text-center font-bold py-3 rounded transition-custom shadow-lg">
+          Get Free Quote
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inner Page Hero -->
+  <section class="relative bg-primary py-24 text-white overflow-hidden pt-36">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Corporate engineering building" class="w-full h-full object-cover opacity-20">
+      <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/90 to-primary"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-aos="fade-up">
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading">About Spectro Elevators</h1>
+      <div class="w-20 h-1 bg-accent mx-auto"></div>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto">A decade of innovation, excellence, and unwavering commitment to vertical transportation safety.</p>
+    </div>
+  </section>
+
+  <!-- Company Story Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-16 items-center">
+      <!-- Copy -->
+      <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+        <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Our Story</span>
+        <h2 class="text-3xl font-bold tracking-tight text-primary font-heading">A decade of innovation, safety and excellence.</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Founded in 2014 by engineer Anubhav Singh in Patna, our company began with a clear vision: to revolutionize vertical transportation through innovative design and uncompromising quality. From our very first passenger elevator installation in a modest office building, we have steadily grown into a trusted provider of reliable elevator solutions across India.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          In just a decade, we have successfully delivered 100+ projects, serving diverse needs from residential apartments to commercial spaces and institutional facilities. Our commitment to engineering precision, safety, and customer satisfaction has earned us the trust of property developers, facility managers, and architects.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Today, Spectro Elevators continues to move forward with a dedicated team of 10+ professionals, blending craftsmanship with modern technology to create elevator systems that are not only functional but also enhance the built environment with elegance and efficiency.
+        </p>
+      </div>
+
+      <!-- Side Image -->
+      <div class="lg:col-span-5" data-aos="fade-left">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Factory assembly safety checks" class="rounded-2xl shadow-2xl border border-slate-100">
+          <div class="absolute -bottom-6 -left-6 bg-accent p-6 rounded-2xl shadow-xl hidden sm:block max-w-[200px] border-4 border-white text-primary">
+            <span class="block text-2xl font-bold font-heading">100+</span>
+            <span class="block text-xs font-bold uppercase mt-1">Projects Delivered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars Section -->
+  <section class="py-24 bg-bgTint border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Our Mission -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-primary text-accent w-12 h-12 rounded-full flex items-center justify-center mb-4">
+            <i data-lucide="target" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary font-heading">Our Mission</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            To deliver innovative, reliable, and safe vertical transportation solutions that enhance the way people move through buildings.
+          </p>
+        </div>
+
+        <!-- Excellence -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-primary text-accent w-12 h-12 rounded-full flex items-center justify-center mb-4">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary font-heading">Excellence</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            We pursue perfection in every aspect of our work, from engineering design to installation and ongoing maintenance.
+          </p>
+        </div>
+
+        <!-- Safety First -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-primary text-accent w-12 h-12 rounded-full flex items-center justify-center mb-4">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary font-heading">Safety First</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Safety is non-negotiable. We exceed industry standards and implement multiple redundant safety systems in all products.
+          </p>
+        </div>
+
+        <!-- Customer Focus -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-primary text-accent w-12 h-12 rounded-full flex items-center justify-center mb-4">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary font-heading">Customer Focus</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Our customers' success is our success. We build lasting relationships through exceptional service and support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4" data-aos="fade-up">
+        <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Our Values</span>
+        <h2 class="text-3xl font-bold tracking-tight text-primary font-heading">The principles that guide everything we do</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-8">
+        <!-- Innovation -->
+        <div class="border border-slate-200 p-8 rounded-2xl shadow-sm space-y-4 bg-bgTint/50 hover:bg-white hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-primary/5 text-accent w-12 h-12 rounded-lg flex items-center justify-center">
+            <i data-lucide="lightbulb" class="w-6 h-6 text-accent"></i>
+          </div>
+          <h4 class="font-bold text-xl text-primary font-heading">Innovation</h4>
+          <p class="text-slate-600 text-sm leading-relaxed">We continuously invest in research and development to pioneer new technologies and design solutions. Our engineering team holds multiple patents and actively collaborates with architects to push the boundaries of what is possible.</p>
+        </div>
+
+        <!-- Integrity -->
+        <div class="border border-slate-200 p-8 rounded-2xl shadow-sm space-y-4 bg-bgTint/50 hover:bg-white hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-primary/5 text-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600"></i>
+          </div>
+          <h4 class="font-bold text-xl text-primary font-heading">Integrity</h4>
+          <p class="text-slate-600 text-sm leading-relaxed">Honesty and transparency are fundamental to our business. We deliver on our promises, provide accurate timelines and budgets, and maintain the highest ethical standards in all our operations.</p>
+        </div>
+
+        <!-- Sustainability -->
+        <div class="border border-slate-200 p-8 rounded-2xl shadow-sm space-y-4 bg-bgTint/50 hover:bg-white hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-primary/5 text-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center">
+            <i data-lucide="leaf" class="w-6 h-6 text-indigo-600"></i>
+          </div>
+          <h4 class="font-bold text-xl text-primary font-heading">Sustainability</h4>
+          <p class="text-slate-600 text-sm leading-relaxed">Environmental responsibility is integral to our design philosophy. Our elevators feature energy-efficient motors, regenerative braking systems, and LED lighting to minimize environmental impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Coverage Areas in Bihar -->
+  <section class="py-24 bg-bgTint border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-16 items-center">
+      <!-- Info -->
+      <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+        <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Network</span>
+        <h2 class="text-3xl font-bold tracking-tight text-primary font-heading">Pan-Bihar Service and Maintenance Network</h2>
+        <p class="text-slate-600">
+          Elevators require ongoing safety checkups. We maintain local support hubs with engineers, safety gear, and spare parts ready in all major districts of Bihar to ensure rapid emergency dispatch.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-accent"></div>
+            <span class="font-semibold text-slate-700 text-sm">Patna (Headquarters)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-accent"></div>
+            <span class="font-semibold text-slate-700 text-sm">Gaya Branch Office</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-accent"></div>
+            <span class="font-semibold text-slate-700 text-sm">Muzaffarpur Service Hub</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-accent"></div>
+            <span class="font-semibold text-slate-700 text-sm">Bhagalpur Hub</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-accent"></div>
+            <span class="font-semibold text-slate-700 text-sm">Darbhanga & Madhubani Network</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-accent"></div>
+            <span class="font-semibold text-slate-700 text-sm">Purnia & Katihar Hub</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Graphic Mock -->
+      <div class="lg:col-span-5" data-aos="fade-left">
+        <div class="bg-primary text-white rounded-2xl p-8 relative shadow-2xl text-center space-y-6">
+          <i data-lucide="map" class="w-16 h-16 text-accent mx-auto animate-pulse"></i>
+          <h4 class="text-xl font-bold font-heading">Rapid Dispatch Center</h4>
+          <p class="text-xs text-slate-400">Our unified central dispatcher line allocates calls to the nearest engineer based on GPS tracking, guaranteeing a response under 1 hour in Patna urban limits.</p>
+          <a href="contact.html" class="inline-block bg-accent hover:bg-accentHover text-primary font-bold px-6 py-2.5 rounded text-sm transition-custom shadow-md">
+            View Contact Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us on Our Journey Section -->
+  <section class="py-20 bg-primary text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,199,44,0.1),transparent_50%)]"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-4xl font-bold font-heading">Join Us on Our Journey</h2>
+      <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
+        Whether you're a property developer, facility manager, or institutional buyer, we're here to elevate your projects to new heights.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="contact.html" class="bg-accent hover:bg-accentHover text-primary font-bold px-8 py-3.5 rounded-lg transition-custom shadow-lg shadow-accent/20">
+          Request a Quote
+        </a>
+        <a href="contact.html" class="border border-white/20 hover:border-accent hover:text-accent text-white font-bold px-8 py-3.5 rounded-lg transition-custom">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-primary text-slate-400 border-t border-white/10 pt-16 pb-8 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 pb-16">
+      <div class="md:col-span-4 space-y-6">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="bg-accent p-1 rounded text-primary w-8 h-8 flex items-center justify-center overflow-hidden">
+            <img src="assets/images/logo/favicon_spectro.png" alt="Spectro Elevators Logo" class="w-6 h-6 object-contain">
+          </div>
+          <span class="font-bold text-lg text-white tracking-wider font-heading">SPECTRO <span class="text-accent">ELEVATORS</span></span>
+        </a>
+        <p class="text-slate-400 leading-relaxed text-xs">
+          Spectro Elevators is Bihar's premier engineering firm specializing in safe, energy-efficient, and ISO certified vertical transportation designs for multi-family flats, duplex villas, hospitals, and commercial structures.
+        </p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/spectroelevators/" target="_blank" class="bg-white/5 border border-white/10 p-2 rounded hover:bg-accent hover:text-primary transition-custom" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://www.instagram.com/spectroelevator/" target="_blank" class="bg-white/5 border border-white/10 p-2 rounded hover:bg-accent hover:text-primary transition-custom" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://www.youtube.com/@spectroelevator" target="_blank" class="bg-white/5 border border-white/10 p-2 rounded hover:bg-accent hover:text-primary transition-custom" aria-label="Youtube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 space-y-4">
+        <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider border-l-2 border-accent pl-2">Quick Links</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-accent transition-colors">About Us</a></li>
+          <li><a href="products.html" class="hover:text-accent transition-colors">Lift Types</a></li>
+          <li><a href="services.html" class="hover:text-accent transition-colors">Services</a></li>
+          <li><a href="projects.html" class="hover:text-accent transition-colors">Gallery</a></li>
+          <li><a href="amc.html" class="hover:text-accent transition-colors">AMC Program</a></li>
+          <li><a href="coverage.html" class="hover:text-accent transition-colors">Service Coverage</a></li>
+          <li><a href="blog.html" class="hover:text-accent transition-colors">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-accent transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider border-l-2 border-accent pl-2">Corporate Office</h4>
+        <ul class="space-y-3.5 text-xs text-slate-400">
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
+            <div>
+              <span>103, K Devraksh, Bailey Rd, Anandi Vihar Colony, Rukanpura, Patna, Bihar 800014</span>
+              <a href="https://maps.app.goo.gl/WnvAjpXEfTzqVLkc9" target="_blank" class="block text-accent hover:underline text-[10px] font-semibold mt-1">View location on Google Maps &rarr;</a>
+            </div>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-4 h-4 text-accent shrink-0"></i>
+            <a href="tel:+919608461829" class="hover:text-accent">+91 98014 51329</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="mail" class="w-4 h-4 text-accent shrink-0"></i>
+            <a href="mailto:spectro.elevator@gmail.com" class="hover:text-accent">spectro.elevator@gmail.com</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="clock" class="w-4 h-4 text-accent shrink-0"></i>
+            <span>24/7 Breakdown Response</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider border-l-2 border-accent pl-2">Find Us on Map</h4>
+        <div class="w-full h-32 rounded-lg overflow-hidden border border-white/10 opacity-70 hover:opacity-100 transition-opacity">
+          <iframe src="https://maps.google.com/maps?q=103,%20K.D.%20Market,%20Bailey%20Rd,%20Adarsh%20Vihar%20Colony,%20Rukanpura,%20Patna,%20Bihar%20800014&t=&z=16&ie=UTF8&iwloc=&output=embed" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Spectro Elevators Private Limited. All Rights Reserved. | Design and Maintained by - <a href="https://www.synergybrandarchitect.in" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors font-semibold">Synergy Brand Architect</a></p>
+      <div class="flex gap-6">
+        <a href="seo-patna-passenger-lift.html" class="hover:underline">Passenger Lift in Patna</a>
+        <a href="seo-bihar-home-lift.html" class="hover:underline">Home Lift Installation Bihar</a>
+        <a href="#" class="hover:underline">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Widget -->
+  <a href="https://wa.me/919608461829?text=Hello%20Spectro%20Elevators%2C%20I%20need%20information%20about%20your%20company." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform animate-bounce" aria-label="Contact us on WhatsApp">
+    <i data-lucide="message-square" class="w-6 h-6"></i>
+  </a>
+
+  <!-- Script Imports -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.377.0"></script>
+  <script src="js/main.js"></script>
+  
+  <script>
+    AOS.init({ once: true, duration: 800 });
+    lucide.createIcons();
+    gsap.from("#main-header", { y: -100, opacity: 0, duration: 1, ease: "power3.out" });
+  </script>
+
+  <!-- Netlify Form Detection for WhatsApp Leads -->
+  <form name="whatsapp-leads" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="text" name="message" />
+    <input type="text" name="source" />
+  </form>
+  <!-- Netlify Form Detection for Quick Quote Leads -->
+  <form name="quick-quote-leads" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="text" name="product" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

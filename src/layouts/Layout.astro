@@ -1,0 +1,91 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  activePage?: string;
+}
+const { 
+  title = "Spectro Elevators | Safe & Certified Lifts in Patna Bihar", 
+  description = "Bihar's leading elevator brand, installing safe, energy-efficient, and ISO certified lifts.",
+  activePage = "home"
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content="assets/images/logo/spectro_logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content={title}>
+  <meta property="twitter:description" content={description}>
+  <meta property="twitter:image" content="assets/images/logo/spectro_logo.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script is:inline src="https://cdn.tailwindcss.com"></script>
+  <script is:inline>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0B192C',
+            accent: '#FFC72C',
+            accentHover: '#EAB308',
+            neutralGrey: '#64748B',
+            bgTint: '#F8FAFC'
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS CSS CDN (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="icon" type="image/png" href="/assets/images/logo/favicon_spectro.png" />
+</head>
+<body class="industrial-grid antialiased">
+
+  <Header activePage={activePage} />
+
+  <slot />
+
+  <Footer />
+
+  <!-- Floating WhatsApp Widget -->
+  <a href="https://wa.me/919608461829?text=Hello%20Spectro%20Elevators%2C%20I%20have%20questions%20about%20your%20services." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform animate-bounce" aria-label="Contact us on WhatsApp">
+    <i data-lucide="message-square" class="w-6 h-6"></i>
+  </a>
+
+  <!-- Script Imports -->
+  <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script is:inline src="https://unpkg.com/lucide@0.377.0"></script>
+  <script is:inline src="/js/main.js"></script>
+  
+  <script is:inline>
+    AOS.init({ once: true, duration: 800 });
+    lucide.createIcons();
+    gsap.from("#main-header", { y: -100, opacity: 0, duration: 1, ease: "power3.out" });
+  </script>
+</body>
+</html>

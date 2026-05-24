@@ -1,0 +1,486 @@
+/* Custom CSS for Spectro Elevators - Industrial Premium Look & Feel */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #0B192C;     /* Deep Industrial Navy */
+  --color-accent: #FFC72C;      /* Safety Warning Yellow */
+  --color-accent-hover: #EAB308;/* Darker Yellow/Gold */
+  --color-neutral: #64748B;     /* Industrial Slate Grey */
+  --color-bg: #F8FAFC;          /* Clean Light Background */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: #1E293B;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Industrial Diagonal Background Strip */
+.industrial-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+}
+
+/* Safety Stripe Pattern */
+.safety-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-accent),
+    var(--color-accent) 15px,
+    var(--color-primary) 15px,
+    var(--color-primary) 30px
+  );
+}
+
+/* Smooth Transitions */
+.transition-custom {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism Navigation */
+.nav-glass {
+  background: rgba(11, 25, 44, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Image zoom effect & split slide-in door white overlay on hover */
+.zoom-container {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.zoom-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white overlay */
+  z-index: 10;
+  transform: translateX(-101%);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.zoom-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white overlay */
+  z-index: 10;
+  transform: translateX(101%);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+/* Trigger slide-in overlays and image zoom on hover */
+.group:hover .zoom-container::before,
+.zoom-container:hover::before {
+  transform: translateX(0);
+}
+
+.group:hover .zoom-container::after,
+.zoom-container:hover::after {
+  transform: translateX(0);
+}
+
+.zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.group:hover .zoom-container img,
+.zoom-container:hover img {
+  transform: scale(1.06) !important;
+}
+
+/* ==========================================
+   PREMIUM BUTTON HOVER & GLOW EFFECTS
+   ========================================== */
+
+/* Shimmer Animation Keyframe */
+@keyframes button-shimmer {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Quote Button Hover Effect */
+.btn-quote-hero {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.btn-quote-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.btn-quote-hero:hover::after {
+  animation: button-shimmer 1.5s infinite;
+}
+
+.btn-quote-hero:hover {
+  transform: translateY(-5px) scale(1.05) !important;
+  box-shadow: 0 12px 30px rgba(255, 199, 44, 0.5) !important;
+  background-color: var(--color-accent-hover) !important;
+}
+
+.btn-quote-hero:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+/* Call Now Outline Button Hover Effect */
+.btn-call-hero {
+  position: relative !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-call-hero:hover {
+  transform: translateY(-5px) scale(1.05) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 12px 30px rgba(255, 199, 44, 0.18) !important;
+}
+
+.btn-call-hero:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+/* WhatsApp Button Hover Effect */
+.btn-whatsapp-hero {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.btn-whatsapp-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.btn-whatsapp-hero:hover::after {
+  animation: button-shimmer 1.5s infinite;
+}
+
+.btn-whatsapp-hero:hover {
+  transform: translateY(-5px) scale(1.05) !important;
+  background-color: #20ba5a !important; /* Slightly darker WhatsApp green on hover */
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5) !important;
+}
+
+.btn-whatsapp-hero:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+/* Infinite Logo Carousel Animation */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-carousel-track {
+  display: flex !important;
+  width: max-content !important;
+  animation: infinite-scroll 30s linear infinite !important;
+}
+
+.logo-carousel-track:hover {
+  animation-play-state: paused !important;
+}
+
+/* Sticky Vertical Quote Button */
+.sticky-quote-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 49;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  padding: 18px 8px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.sticky-quote-btn:hover {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  transform: translateY(-50%) translateX(-4px);
+  box-shadow: -6px 6px 25px rgba(255, 199, 44, 0.3);
+}
+
+.sticky-quote-btn svg {
+  width: 14px;
+  height: 14px;
+  transform: rotate(90deg); /* Adjust SVG orientation for vertical reading */
+  margin-bottom: 4px;
+}
+
+/* Quick Quote Modal Custom Animations */
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px);
+  }
+}
+
+@keyframes modal-slide-up {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.quick-modal-backdrop {
+  animation: modal-fade-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.quick-modal-card {
+  animation: modal-slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 199, 44, 0.05);
+}
+
+/* Testimonials Custom Grid Background */
+.testimonials-custom-bg {
+  position: relative;
+  background-color: #ffffff !important; /* Solid white background */
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
+  overflow: hidden;
+}
+
+/* 3D Perspective Card Layout & Effects */
+.perspective-grid {
+  perspective: 1200px;
+}
+
+.testimonial-3d-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+  will-change: transform;
+}
+
+/* Hover style and fallback when JS is not available */
+.testimonial-3d-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12), 0 0 35px rgba(255, 199, 44, 0.12);
+  border-color: rgba(226, 232, 240, 1);
+}
+
+/* Parallax offsets for nested children */
+.testimonial-3d-card .tilt-stars {
+  transform: translateZ(30px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-3d-card .tilt-text {
+  transform: translateZ(20px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-3d-card .tilt-profile {
+  transform: translateZ(40px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Premium gradient top-border highlight */
+.testimonial-3d-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FFC72C, #EAB308, #FFC72C);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.testimonial-3d-card:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================
+   PREMIUM LOGO MARQUEE & PARTNER CARDS
+   ========================================== */
+.logo-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.logo-marquee-wrapper::before,
+.logo-marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.logo-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%);
+}
+
+.logo-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg) 0%, transparent 100%);
+}
+
+/* Card layout for logo */
+.partner-logo-card {
+  flex-shrink: 0;
+  width: 200px;
+  height: 84px;
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(11, 25, 44, 0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.partner-logo-card img {
+  max-width: 75%;
+  max-height: 55%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.65;
+  transition: all 0.4s ease;
+}
+
+.partner-logo-card:hover {
+  background: #ffffff;
+  border-color: rgba(255, 199, 44, 0.5); /* Primary Accent color */
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 16px 28px rgba(11, 25, 44, 0.06), 0 6px 14px rgba(255, 199, 44, 0.08);
+}
+
+.partner-logo-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+
+
+

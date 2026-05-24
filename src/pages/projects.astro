@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Completed Projects | Spectro Elevators - Lift Installation Gallery" description="Explore our portfolio of passenger, hospital, MRL, and glass home elevators installed across Patna, Gaya, Muzaffarpur, and other parts of Bihar." activePage="projects">
+  <!-- Inner Page Hero -->
+  <section class="relative bg-primary py-24 text-white overflow-hidden pt-36">
+    <div class="absolute inset-0 z-0">
+      <img src="https://imagizer.imageshack.com/img922/7523/XW6xuk.jpg" alt="Completed complex elevator structures" class="w-full h-full object-cover opacity-20">
+      <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/95 to-primary"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-aos="fade-up">
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading">Completed Sites & Installations</h1>
+      <div class="w-20 h-1 bg-accent mx-auto"></div>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto">Browse photos and project briefs from residential, commercial, and medical elevator installations across Bihar.</p>
+    </div>
+  </section>
+
+  <!-- Filterable Gallery Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-16" data-aos="fade-up">
+        <button class="filter-btn px-6 py-2.5 rounded-lg text-sm font-bold transition-custom bg-yellow-400 text-slate-900 shadow-md" data-filter="all">All Projects</button>
+        <button class="filter-btn px-6 py-2.5 rounded-lg text-sm font-bold transition-custom bg-slate-800 text-white hover:bg-slate-700" data-filter="passenger">Passenger Lifts</button>
+        <button class="filter-btn px-6 py-2.5 rounded-lg text-sm font-bold transition-custom bg-slate-800 text-white hover:bg-slate-700" data-filter="home">Home / Villa Lifts</button>
+        <button class="filter-btn px-6 py-2.5 rounded-lg text-sm font-bold transition-custom bg-slate-800 text-white hover:bg-slate-700" data-filter="commercial">Commercial / Freight</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="passenger" data-aos="fade-up" data-aos-delay="100">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Apartment lift Patna" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 border-t border-slate-100 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-accent uppercase bg-primary px-2.5 py-0.5 rounded">Passenger Lift</span>
+              <span class="text-xs text-slate-400 font-medium">Patna</span>
+            </div>
+            <h4 class="font-bold text-lg text-primary">10-Passenger Gearless Lift</h4>
+            <p class="text-xs text-slate-500">Completed at Ashiana Residency complex. Runs at 1.5 m/s with ARD safety device.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="home" data-aos="fade-up" data-aos-delay="200">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/home lift.png" alt="Home lift AP Colony Gaya" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 border-t border-slate-100 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-accent uppercase bg-primary px-2.5 py-0.5 rounded">Home Lift</span>
+              <span class="text-xs text-slate-400 font-medium">Gaya</span>
+            </div>
+            <h4 class="font-bold text-lg text-primary">Glass Cabin Scenic Villa Lift</h4>
+            <p class="text-xs text-slate-500">Custom circular glass design in a duplex villa at AP Colony. Single-phase 220V power.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="commercial" data-aos="fade-up" data-aos-delay="300">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/Hospital Lift.png" alt="Hospital elevator Muzaffarpur" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 border-t border-slate-100 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-accent uppercase bg-primary px-2.5 py-0.5 rounded">Commercial</span>
+              <span class="text-xs text-slate-400 font-medium">Muzaffarpur</span>
+            </div>
+            <h4 class="font-bold text-lg text-primary">Stretcher Elevator (1500kg)</h4>
+            <p class="text-xs text-slate-500">Double telescope doors, medical cart bumpers, installed at City Trauma Center.</p>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="passenger" data-aos="fade-up" data-aos-delay="100">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/passanger lift.png" alt="Commercial plaza Fraser Road Patna" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 border-t border-slate-100 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-accent uppercase bg-primary px-2.5 py-0.5 rounded">Passenger Lift</span>
+              <span class="text-xs text-slate-400 font-medium">Patna</span>
+            </div>
+            <h4 class="font-bold text-lg text-primary">Dual-Duplex Office Elevator</h4>
+            <p class="text-xs text-slate-500">Integrated traffic management controller installed at Grand Plaza, Fraser Road.</p>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="home" data-aos="fade-up" data-aos-delay="200">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/home lift.png" alt="Bungalow lift Bhagalpur" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 border-t border-slate-100 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-accent uppercase bg-primary px-2.5 py-0.5 rounded">Home Lift</span>
+              <span class="text-xs text-slate-400 font-medium">Bhagalpur</span>
+            </div>
+            <h4 class="font-bold text-lg text-primary">Automatic Door Hydraulic Lift</h4>
+            <p class="text-xs text-slate-500">Pit-less design installed alongside staircase, matching warm interior wood paneling.</p>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="gallery-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md group" data-category="commercial" data-aos="fade-up" data-aos-delay="300">
+          <div class="zoom-container h-64 bg-slate-100">
+            <img src="assets/images/lifts/goods lift.png" alt="Freight lift Purnia warehouse" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 border-t border-slate-100 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-accent uppercase bg-primary px-2.5 py-0.5 rounded">Commercial</span>
+              <span class="text-xs text-slate-400 font-medium">Purnia</span>
+            </div>
+            <h4 class="font-bold text-lg text-primary">3000kg Freight Lift (Geared)</h4>
+            <p class="text-xs text-slate-500">Reinforced cabin walling and safety collapsible steel gates at Logistics Warehouse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+</Layout>

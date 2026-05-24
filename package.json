@@ -1,0 +1,14 @@
+{
+  "name": "spectro-elevators",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev --port 8000 --host",
+    "start": "astro dev --port 8000 --host",
+    "build": "astro build",
+    "preview": "astro preview --port 8000"
+  },
+  "dependencies": {
+    "astro": "^4.8.5"
+  }
+}

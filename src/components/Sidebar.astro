@@ -1,0 +1,118 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentSlug?: string;
+  sourceName?: string;
+}
+
+const { currentSlug = "", sourceName = "Blog Detail Page" } = Astro.props;
+
+// Fetch other blog posts, sort by pubDate desc, and take up to 3
+let posts = await getCollection('blog');
+const otherPosts = posts
+  .filter(post => post.slug !== currentSlug)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<aside class="lg:col-span-4 space-y-8">
+  
+  <!-- Widget 1: Free Consultation Inquiry Form -->
+  <div class="bg-primary text-white border border-white/10 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,199,44,0.06),transparent_60%)]"></div>
+    <h4 class="text-xl font-bold font-heading text-white border-b border-white/10 pb-4 mb-6 relative z-10 flex items-center gap-2">
+      <i data-lucide="file-text" class="w-5 h-5 text-accent"></i> Get Free Quote
+    </h4>
+    
+    <form class="space-y-4 relative z-10 inquiry-form" data-source={sourceName}>
+      <input type="hidden" name="form-name" value="inquiry-leads">
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="side-inq-name">Name *</label>
+        <input id="side-inq-name" type="text" name="name" required placeholder="Your Name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm transition-colors">
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="side-inq-phone">Phone Number *</label>
+        <input id="side-inq-phone" type="tel" name="phone" required placeholder="Phone Number" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm transition-colors">
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="side-inq-email">Email</label>
+        <input id="side-inq-email" type="email" name="email" placeholder="Your Email" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm transition-colors">
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="side-inq-lift">Interest Type</label>
+        <select id="side-inq-lift" name="lift_type" class="w-full bg-[#0B192C] border border-white/10 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-accent text-sm">
+          <option value="Passenger Elevator">Passenger Elevator</option>
+          <option value="Residential & Home Lift">Residential & Home Lift</option>
+          <option value="MRL Elevator">MRL Elevator</option>
+          <option value="Hydraulic Elevator">Hydraulic Elevator</option>
+          <option value="Glass Capsule Elevator">Glass Capsule Elevator</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="side-inq-msg">Message</label>
+        <textarea id="side-inq-msg" name="message" rows="3" placeholder="Describe your floors, location, etc." class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-accent text-sm transition-colors resize-none"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-accent hover:bg-accentHover text-primary font-bold py-3.5 rounded-lg transition-custom text-sm shadow-md mt-2 flex items-center justify-center gap-2">
+        <span>Request Free Survey</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Widget 2: Recent Articles (Dynamic) -->
+  <div class="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-xl" data-aos="fade-up" data-aos-delay="400">
+    <h4 class="text-lg font-bold font-heading text-primary border-b border-slate-100 pb-4 mb-6 flex items-center gap-2">
+      <i data-lucide="link" class="w-5 h-5 text-accent"></i> Other Insights
+    </h4>
+    
+    <div class="space-y-5">
+      {otherPosts.map(post => (
+        <div class="flex gap-4 group">
+          <div class="w-16 h-16 bg-slate-100 rounded-lg overflow-hidden shrink-0">
+            <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="space-y-1">
+            <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">{post.data.category}</span>
+            <a href={`${post.slug}.html`} class="block text-sm font-bold text-primary hover:text-accent font-heading line-clamp-2 transition-colors">
+              {post.data.title}
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-6 pt-5 border-t border-slate-100">
+      <a href="blog.html" class="text-sm text-primary hover:text-accent font-bold flex items-center gap-1">
+        View All Articles <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Widget 3: Quick Certifications checklist -->
+  <div class="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-xl" data-aos="fade-up" data-aos-delay="500">
+    <h4 class="text-lg font-bold font-heading text-primary border-b border-slate-100 pb-4 mb-6 flex items-center gap-2">
+      <i data-lucide="verified" class="w-5 h-5 text-accent"></i> Spectro Standard
+    </h4>
+    
+    <ul class="space-y-3.5 text-sm text-slate-600">
+      <li class="flex gap-2">
+        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+        <span>ISO 9001:2015 Certified Installation Calibrations</span>
+      </li>
+      <li class="flex gap-2">
+        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+        <span>CE European Certified Elevator Components</span>
+      </li>
+      <li class="flex gap-2">
+        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+        <span>In-House Team of Certified Electrical/Civil Engineers</span>
+      </li>
+      <li class="flex gap-2">
+        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+        <span>Dedicated 24/7 Emergency Breakdown Helpline</span>
+      </li>
+    </ul>
+  </div>
+
+</aside>

@@ -410,5 +410,77 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+/* ==========================================
+   PREMIUM LOGO MARQUEE & PARTNER CARDS
+   ========================================== */
+.logo-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.logo-marquee-wrapper::before,
+.logo-marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.logo-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%);
+}
+
+.logo-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg) 0%, transparent 100%);
+}
+
+/* Card layout for logo */
+.partner-logo-card {
+  flex-shrink: 0;
+  width: 200px;
+  height: 84px;
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(11, 25, 44, 0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.partner-logo-card img {
+  max-width: 75%;
+  max-height: 55%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.65;
+  transition: all 0.4s ease;
+}
+
+.partner-logo-card:hover {
+  background: #ffffff;
+  border-color: rgba(255, 199, 44, 0.5); /* Primary Accent color */
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 16px 28px rgba(11, 25, 44, 0.06), 0 6px 14px rgba(255, 199, 44, 0.08);
+}
+
+.partner-logo-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+
 
 

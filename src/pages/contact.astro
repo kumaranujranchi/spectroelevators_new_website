@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us | Spectro Elevators - Get a Free Quote in Bihar" description="Get in touch with Spectro Elevators. Contact details for Patna, Gaya, Muzaffarpur branches. Request a site survey, consultation, or free price quote." activePage="contact">
+  <!-- Inner Page Hero -->
+  <section class="relative bg-primary py-24 text-white overflow-hidden pt-36">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Office lobby entrance" class="w-full h-full object-cover opacity-20">
+      <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/95 to-primary"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-aos="fade-up">
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading">Get in Touch With Us</h1>
+      <div class="w-20 h-1 bg-accent mx-auto"></div>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto">Request a free site survey, structural calculation, price quote, or AMC consultation.</p>
+    </div>
+  </section>
+
+  <!-- Contact Coordinates & Form -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-16">
+      
+      <!-- Contact details -->
+      <div class="lg:col-span-5 space-y-12" data-aos="fade-right">
+        <div class="space-y-4">
+          <span class="text-sm font-bold text-accent uppercase tracking-wider bg-primary px-3 py-1 rounded">Connect</span>
+          <h2 class="text-3xl font-bold tracking-tight text-primary font-heading">Direct Contact Channels</h2>
+          <p class="text-slate-600">Reach out directly via phone or email, or drop by our central office located in Fraser Road, Patna.</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Corporate HQ -->
+          <div class="flex gap-4 items-start">
+            <div class="bg-slate-100 p-3 rounded-lg text-primary">
+              <i data-lucide="map-pin" class="w-6 h-6 text-accent"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary text-lg">Corporate Headquarters</h4>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                302, Grand Plaza, Fraser Road,<br>
+                Dak Bunglow Crossing, Patna - 800001, Bihar
+              </p>
+            </div>
+          </div>
+
+          <!-- Hotlines -->
+          <div class="flex gap-4 items-start">
+            <div class="bg-slate-100 p-3 rounded-lg text-primary">
+              <i data-lucide="phone" class="w-6 h-6 text-accent"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary text-lg">Call Helplines</h4>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                General Inquiry: <a href="tel:+919608461829" class="text-slate-700 hover:text-accent font-semibold">+91 98014 51329</a><br>
+                24x7 Breakdown Rescue: <a href="tel:+919608461829" class="text-rose-600 hover:text-accent font-semibold">+91 98014 51329</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Emails -->
+          <div class="flex gap-4 items-start">
+            <div class="bg-slate-100 p-3 rounded-lg text-primary">
+              <i data-lucide="mail" class="w-6 h-6 text-accent"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary text-lg">Electronic Mails</h4>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Sales Department: <a href="mailto:sales@spectroelevator.com" class="text-slate-700 hover:text-accent font-semibold">sales@spectroelevator.com</a><br>
+                Corporate Info: <a href="mailto:spectro.elevator@gmail.com" class="text-slate-700 hover:text-accent font-semibold">spectro.elevator@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Map embed -->
+        <div class="w-full h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+          <iframe src="https://maps.google.com/maps?q=103,%20K.D.%20Market,%20Bailey%20Rd,%20Adarsh%20Vihar%20Colony,%20Rukanpura,%20Patna,%20Bihar%20800014&t=&z=16&ie=UTF8&iwloc=&output=embed" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="lg:col-span-7" data-aos="fade-left">
+        <div class="bg-bgTint rounded-2xl p-8 border border-slate-200 shadow-lg space-y-6">
+          <div>
+            <h3 class="text-2xl font-bold text-primary font-heading">Submit Inquiry Blueprint</h3>
+            <p class="text-xs text-slate-500 mt-1">Fill out the fields to receive custom-tailored calculations and price reports.</p>
+          </div>
+
+          <form class="inquiry-form space-y-5" data-source="Contact Page Form" name="inquiry-leads" data-netlify="true">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" for="contact-name">Full Name</label>
+                <input id="contact-name" type="text" name="name" required placeholder="e.g. Ramesh Singh" class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-primary focus:outline-none focus:border-accent text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" for="contact-phone">Phone Number</label>
+                <input id="contact-phone" type="tel" name="phone" required placeholder="e.g. 98765 XXXXX" class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-primary focus:outline-none focus:border-accent text-sm">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" for="contact-email">Email Address</label>
+                <input id="contact-email" type="email" name="email" required placeholder="e.g. ramesh@example.com" class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-primary focus:outline-none focus:border-accent text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" for="contact-lift-type">Elevator Category</label>
+                <select id="contact-lift-type" name="lift_type" class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-primary focus:outline-none focus:border-accent text-sm">
+                  <option value="Passenger Lift">Passenger Lift</option>
+                  <option value="Hospital Lift">Hospital Lift</option>
+                  <option value="Goods/Freight Lift">Goods/Freight Lift</option>
+                  <option value="MRL Lift">MRL Lift</option>
+                  <option value="Home Lift">Home Lift</option>
+                  <option value="Capsule Lift">Capsule Lift</option>
+                  <option value="Hydraulic Lift">Hydraulic Lift</option>
+                  <option value="Automobile Lift">Automobile Lift</option>
+                  <option value="Dumbwaiter Lift">Service Lift / Dumbwaiter</option>
+                  <option value="Outdoor Lift">Outdoor Lift</option>
+                  <option value="Stair Lift">Stair Lift / Chair Lift</option>
+                  <option value="Vacuum Lift">Pneumatic Vacuum Lift</option>
+                  <option value="AMC Service Program">AMC Service Program</option>
+                  <option value="Modernization Upgrade">Modernization Upgrade</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" for="contact-building-type">Building Category</label>
+              <select id="contact-building-type" name="building_type" class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-primary focus:outline-none focus:border-accent text-sm">
+                <option value="Residential Apartment">Residential Apartment (Multi-family)</option>
+                <option value="Private Bungalow">Private Bungalow (Duplex/Villa)</option>
+                <option value="Commercial Office">Commercial Office Plaza</option>
+                <option value="Hospital / Clinic">Hospital / Clinic Complex</option>
+                <option value="Factory / Warehouse">Factory / Warehouse Facility</option>
+                <option value="Retail / Mall">Retail Showroom / Shopping Mall</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" for="contact-msg">Detailed Requirements</label>
+              <textarea id="contact-msg" name="message" rows="4" placeholder="Mention shaft dimensions, number of floors, location, and other specifics..." class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-primary focus:outline-none focus:border-accent text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-accent hover:bg-accentHover text-primary font-bold py-4 rounded-lg transition-custom text-sm shadow-md uppercase tracking-wider font-heading">
+              Submit Inquiry & Connect WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+</Layout>
