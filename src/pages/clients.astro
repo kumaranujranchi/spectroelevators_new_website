@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const clients = [
+  { name: "PG GROUP", initials: "PG", type: "Commercial Passenger Lift", location: "Bailey Road, Patna" },
+  { name: "AMARJEET", initials: "AM", type: "MRL Home Lift", location: "Kankarbagh, Patna" },
+  { name: "SIDDIQUE", initials: "SI", type: "6-Passenger Automatic VVVF Lift", location: "Ashiana Nagar, Patna" },
+  { name: "RAJASTHAN APARTMENT", initials: "RJ", type: "Automatic Passenger Lift", location: "Boring Road, Patna" },
+  { name: "BKR RESIDENCY", initials: "BKR", type: "Residential VVVF Lift", location: "Danapur, Patna" },
+  { name: "RMR CONSTRUCTIONS", initials: "RMR", type: "High-Speed Passenger Lift", location: "Khajpura, Patna" },
+  { name: "BKS PLAZA", initials: "BKS", type: "Commercial Lift", location: "Exhibition Road, Patna" },
+  { name: "RMD ENCLAVE", initials: "RMD", type: "Residential Elevator", location: "Rukanpura, Patna" },
+  { name: "RAJASTHAN DEVELOPERS", initials: "RJ", type: "Traction Passenger Lift", location: "Patliputra Colony, Patna" },
+  { name: "MEENAKSHI HEALTHCARE", initials: "MHS", type: "Stretcher Hospital Lift", location: "Kankarbagh, Patna" },
+  { name: "SHANTI SHARNAM TOWER", initials: "SST", type: "8-Passenger Residential Lift", location: "Bailey Road, Patna" },
+  { name: "HARIPRIYA PLAZA", initials: "HP", type: "Commercial Capsule Lift", location: "Fraser Road, Patna" },
+  { name: "BNS RESIDENCY", initials: "BNS", type: "Standard Passenger Lift", location: "Gola Road, Patna" },
+  { name: "RMD BUILDERS", initials: "RMD", type: "Gearless Passenger Lift", location: "Jagdeo Path, Patna" },
+  { name: "BK PLAZA", initials: "BK", type: "Commercial VVVF Lift", location: "Kadamkuan, Patna" },
+  { name: "BNS APARTMENTS", initials: "BNS", type: "6-Passenger Residential Lift", location: "Phulwari Sharif, Patna" },
+  { name: "RM BUILDERS & DEVELOPERS", initials: "RM", type: "Traction Elevator", location: "Rajendra Nagar, Patna" },
+  { name: "MB PLAZA", initials: "MB", type: "Commercial Passenger Lift", location: "Exhibition Road, Patna" },
+  { name: "HOTEL TRIDENT", initials: "HT", type: "Glass Capsule Lift", location: "Gandhi Maidan, Patna" },
+  { name: "KB CHANDRA VILLA", initials: "KB", type: "Hydraulic Home Lift", location: "Boring Canal Road, Patna" },
+  { name: "ASP ENCLAVE (GOPAL APARTMENTS)", initials: "ASP", type: "Residential Passenger Lift", location: "Anisabad, Patna" },
+  { name: "MAA MANGLA PLAZA", initials: "MMP", type: "6-Passenger VVVF Lift", location: "Muzaffarpur, Bihar" },
+  { name: "RMD RESIDENCY", initials: "RMD", type: "Residential Elevator", location: "Gaya, Bihar" },
+  { name: "BSH INFRATECH", initials: "BSH", type: "Commercial Passenger Lift", location: "Bhagalpur, Bihar" },
+  { name: "ARS RESIDENCY", initials: "ARS", type: "Residential Lift", location: "Darbhanga, Bihar" },
+  { name: "MB BUILDERS", initials: "MB", type: "Residential VVVF Lift", location: "Ara, Bihar" },
+  { name: "MB APARTMENTS", initials: "MB", type: "Passenger Elevator", location: "Bihta, Bihar" }
+];
+
+const testimonials = [
+  {
+    name: "Dr. Rahul Sharma",
+    role: "Chief Administrator",
+    company: "Apollo Clinic Patna",
+    content: "Spectro Elevators delivered superior design and safety for our new hospital wing. Their passenger lifts are extremely smooth, and their medical lift features work flawlessly during emergencies."
+  },
+  {
+    name: "Priya Sharma",
+    role: "Executive Director",
+    company: "Elite Developers Patna",
+    content: "Working with Spectro Elevators has been an absolute pleasure. Their team is professional, their home lifts are state-of-the-art, and they completed the project ahead of schedule."
+  },
+  {
+    name: "Amit Patel",
+    role: "Secretary",
+    company: "Jalalpur Greens Apartment Patna",
+    content: "We modernised our 15-year old passenger elevator with Spectro. The VVVF technology has reduced our electricity bills by 35% and the ride is incredibly smooth now."
+  },
+  {
+    name: "Shazia Siddiqui",
+    role: "Chief Operations Officer",
+    company: "Patna Central Mall",
+    content: "We choose Spectro for all our commercial projects. Their escalators and high-speed elevators handle our heavy weekend crowds with zero breakdowns. Outstanding service!"
+  },
+  {
+    name: "Vikram Singh",
+    role: "Villa Owner",
+    company: "Boring Road Patna",
+    content: "Installed a hydraulic home lift in my duplex villa. The space-saving design is perfect, and the golden-finish cabin looks highly premium. Highly recommended!"
+  },
+  {
+    name: "Sunita Mishra",
+    role: "Managing Director",
+    company: "Mishra Towers Patna",
+    content: "Their AMC service is exceptional. Their team conducts monthly inspections diligently, and their response to breakdown calls is incredibly fast."
+  }
+];
+---
+
+<Layout title="Our Clients & Partners | Spectro Elevators Patna" description="Discover our portfolio of trusted clients, apartment associations, duplex villas, and hospitals that rely on Spectro Elevators for safe and energy-efficient lift installations in Patna." activePage="clients">
+  
+  <!-- Hero Section -->
+  <section class="relative bg-primary py-24 text-white overflow-hidden pt-36">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/95 to-primary"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-aos="fade-up">
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading">Our Clients</h1>
+      <div class="w-20 h-1 bg-accent mx-auto"></div>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto">Trusted by leading organizations across healthcare, real estate, corporate, and government sectors.</p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-white relative -mt-8 z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Stat 1 -->
+        <div class="bg-bgTint/80 backdrop-blur border border-slate-100 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center space-y-2 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-accent/15 w-12 h-12 rounded-full flex items-center justify-center text-primary">
+            <i data-lucide="building-2" class="w-6 h-6 text-accent"></i>
+          </div>
+          <span class="text-2xl font-extrabold text-primary font-heading">10+</span>
+          <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Active Sites</span>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="bg-bgTint/80 backdrop-blur border border-slate-100 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center space-y-2 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-accent/15 w-12 h-12 rounded-full flex items-center justify-center text-primary">
+            <i data-lucide="check-circle" class="w-6 h-6 text-accent"></i>
+          </div>
+          <span class="text-2xl font-extrabold text-primary font-heading">250+</span>
+          <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Projects Completed</span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="bg-bgTint/80 backdrop-blur border border-slate-100 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center space-y-2 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-accent/15 w-12 h-12 rounded-full flex items-center justify-center text-primary">
+            <i data-lucide="users" class="w-6 h-6 text-accent"></i>
+          </div>
+          <span class="text-2xl font-extrabold text-primary font-heading">98%</span>
+          <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Client Retention</span>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="bg-bgTint/80 backdrop-blur border border-slate-100 rounded-2xl p-6 text-center shadow-sm flex flex-col items-center justify-center space-y-2 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-accent/15 w-12 h-12 rounded-full flex items-center justify-center text-primary">
+            <i class="w-6 h-6 text-accent" data-lucide="star"></i>
+          </div>
+          <span class="text-2xl font-extrabold text-primary font-heading">4.9/5</span>
+          <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Average Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Grid Section -->
+  <section class="py-20 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold tracking-tight text-primary font-heading">Trusted By Industry Leaders</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+        <p class="text-slate-500">Companies and building owners that choose and continue to choose Spectro Elevators.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {clients.map((client, index) => (
+          <div 
+            class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group"
+            data-aos="fade-up"
+            data-aos-delay={10 * (index % 10)}
+          >
+            <!-- Monogram circle -->
+            <div class="w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors border border-slate-100">
+              <span class="text-primary font-bold text-lg group-hover:text-accent transition-colors font-heading">{client.initials}</span>
+            </div>
+            
+            <!-- Client Name -->
+            <h3 class="font-bold text-sm text-primary uppercase tracking-wide min-h-[40px] flex items-center justify-center">{client.name}</h3>
+            
+            <!-- Installation Specifications -->
+            <p class="text-[11px] text-slate-400 font-medium mt-1">{client.type}</p>
+            
+            <!-- Location Badge -->
+            <span class="bg-accent/10 text-primary px-3 py-1 rounded-full text-[10px] font-semibold mt-3 flex items-center gap-1">
+              <i data-lucide="map-pin" class="w-3 h-3 text-accent shrink-0"></i>
+              {client.location}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold tracking-tight text-primary font-heading">Client Testimonials</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+        <p class="text-slate-500">Hear directly from our satisfied building owners.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((t, index) => (
+          <div 
+            class="border border-slate-150 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative bg-white flex flex-col justify-between"
+            data-aos="fade-up"
+            data-aos-delay={100 * (index % 3)}
+          >
+            <div>
+              <div class="flex text-accent mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              </div>
+              <p class="text-slate-600 italic text-sm leading-relaxed mb-6">"{t.content}"</p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 rounded-full bg-primary/5 text-primary flex items-center justify-center font-bold text-xs uppercase border border-slate-100 shrink-0">
+                {t.name.split(' ').map(n => n[0]).join('')}
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-primary">{t.name}</h4>
+                <p class="text-[10px] text-slate-400 font-semibold">{t.role} &middot; <span class="text-accent font-bold">{t.company}</span></p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,199,44,0.1),transparent_50%)]"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-4xl font-bold font-heading">Join Our Growing Client Family</h2>
+      <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
+        Experience the Spectro difference. Let us help you find the perfect elevator solution for your project.
+      </p>
+      <div class="pt-2">
+        <a href="contact.html" class="inline-block bg-accent hover:bg-accentHover text-primary font-bold px-8 py-3.5 rounded-lg transition-custom shadow-lg shadow-accent/20">
+          Request a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
